@@ -1,0 +1,32 @@
+/* Center card di halaman */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Style untuk animasi card */
+.efek1 {
+    width: 18rem; /* Lebar card */
+    position: relative;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* Efek saat card di-hover: scaling dan shadow */
+.efek1:hover {
+    transform: scale(1.05) rotateX(5deg) rotateY(5deg);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Efek untuk gambar di dalam card */
+.img1 {
+    transition: transform 0.6s ease;
+}
+
+/* Efek zoom gambar saat card di-hover */
+.efek1:hover .img1 {
+    transform: scale(1.1);
+}

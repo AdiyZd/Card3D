@@ -1,0 +1,56 @@
+.efek2 {
+    width: 18rem;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.efek2:hover {
+    animation: rotateCard 1s ease forwards;
+}
+
+/* Pastikan untuk menggunakan kelas .efek2-body dan bukan #efek2-body */
+.efek2-body #h51,
+.efek2-body #p1,
+.efek2-body #a1 {
+    transition: transform 0.5s ease, color 0.5s ease; /* Tambahkan transisi untuk animasi yang lebih halus */
+}
+
+/* Gunakan . untuk menyebut kelas dan tambahkan . di depan efek2-body */
+.efek2:hover .efek2-body #h51,
+.efek2:hover .efek2-body #p1,
+.efek2:hover .efek2-body #a1 {
+    transform: translateX(-10px) translateZ(20px) rotateY(-20deg); /* Ubah ke -20px untuk geseran yang lebih halus dan efek 3D */
+    color: #333;
+}
+
+.img2 {
+    transform-origin: center;
+    animation: none;
+}
+
+.efek2:hover > .img2 {
+    animation: rotateImage 1s ease forwards;
+}
+
+@keyframes rotateCard {
+    from {
+        transform: rotateY(0) rotateX(0) scale(1);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
+    }
+    to {
+        transform: rotateY(15deg) rotateX(15deg) scale(1.05);
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+    }
+}
+
+@keyframes rotateImage {
+    from {
+        transform: rotate(0) scale(1);
+    }
+    to {
+        transform: rotate(15deg) scale(1.1);
+    }
+}
